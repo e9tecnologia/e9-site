@@ -12,8 +12,6 @@ const navEmpresa = [
 
 const navProdutos = [
   { label: "E9 Gestão",    href: "/gestao",              desc: "ERP para PMEs" },
-  { label: "Raiz",         href: "/raiz",                desc: "Para microempresas" },
-  { label: "2Follow",      href: "/2follow",              desc: "IoT/RFID chão de fábrica", external: false },
 ];
 
 export default function Footer() {

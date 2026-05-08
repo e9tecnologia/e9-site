@@ -226,45 +226,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Outros produtos ── */}
-        <section className="bg-slate-50 py-20 px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-2xl font-bold text-slate-900">Outros produtos</h2>
-              <p className="text-slate-500 text-sm mt-2">Soluções desenvolvidas pela E9 para segmentos específicos.</p>
-            </div>
-            <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-
-              {/* Raiz */}
-              <div className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md hover:border-[#ffcb05] transition-all duration-300">
-                <div className="relative h-12 w-36 mb-5">
-                  <Image src="/logos/raiz-logo.png" alt="Raiz" fill className="object-contain object-left" />
-                </div>
-                <p className="text-slate-700 text-sm leading-relaxed mb-4">
-                  Sistema de gestão para microempresas. NF-e, NFS-e, integração bancária, contas a pagar/receber, estoque e relatórios contábeis.
-                </p>
-                <a href="/raiz" className="text-sm font-semibold text-slate-700 hover:text-slate-900 inline-flex items-center gap-1">
-                  Saiba mais <ArrowRightIcon className="h-3.5 w-3.5" />
-                </a>
-              </div>
-
-              {/* 2Follow */}
-              <div className="bg-slate-900 rounded-2xl border border-slate-800 p-6 hover:shadow-md hover:border-slate-700 transition-all duration-300">
-                <div className="relative h-12 w-36 mb-5">
-                  <Image src="/logos/2follow.png" alt="2Follow" fill className="object-contain object-left" />
-                </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                  Rastreamento de ordens de serviço em chão de fábrica via IoT e RFID. Desenvolvido e integrado ao ERP pela E9.
-                </p>
-                <a href="http://2follow.com.br" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-slate-300 hover:text-white inline-flex items-center gap-1">
-                  Saiba mais <ArrowRightIcon className="h-3.5 w-3.5" />
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
         {/* ── CTA final ── */}
         <section className="bg-[#ffcb05] py-20 px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center">

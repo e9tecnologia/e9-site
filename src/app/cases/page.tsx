@@ -75,25 +75,11 @@ const cases = [
     cor: "border-slate-200",
     badge: "E9 Gestão",
   },
-  {
-    segmento: "Chão de fábrica",
-    titulo: "Rastreamento de OS com IoT e RFID",
-    desafio: "Indústria sem visibilidade do andamento das ordens de serviço no chão de fábrica, com gargalos não identificados e produção descontrolada.",
-    solucao: "Implantação do 2Follow com dispositivos IoT e leitores RFID instalados em pontos estratégicos da linha de produção, integrado ao ERP.",
-    resultados: [
-      "Rastreamento em tempo real de cada OS",
-      "Identificação automática de gargalos",
-      "Integração direta com o sistema de gestão",
-    ],
-    cor: "border-[#ffcb05]/40",
-    badge: "2Follow",
-  },
 ];
 
 const badgeColors: Record<string, string> = {
   "E9 Gestão":  "bg-[#005792]/10 text-[#005792]",
   "Sob medida": "bg-slate-100 text-slate-600",
-  "2Follow":    "bg-[#ffcb05]/20 text-slate-700",
 };
 
 export default function CasesPage() {

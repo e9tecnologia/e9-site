@@ -12,19 +12,6 @@ const produtos = [
     desc: "ERP para PMEs com operação complexa",
     badge: "Principal",
   },
-  {
-    label: "Raiz",
-    href: "/raiz",
-    desc: "Sistema de gestão para microempresas",
-    badge: null,
-  },
-  {
-    label: "2Follow",
-    href: "/2follow",
-    desc: "Rastreamento de OS em chão de fábrica",
-    badge: null,
-    external: false,
-  },
 ];
 
 const navLinks = [
