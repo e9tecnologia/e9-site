@@ -66,8 +66,6 @@ export default function Header() {
                   <Link
                     key={p.label}
                     href={p.href}
-                    target={p.external ? "_blank" : undefined}
-                    rel={p.external ? "noopener noreferrer" : undefined}
                     onClick={() => setDropOpen(false)}
                     className="flex items-start gap-3 px-4 py-3 hover:bg-slate-50 transition-colors group"
                   >
@@ -135,8 +133,6 @@ export default function Header() {
                 <Link
                   key={p.label}
                   href={p.href}
-                  target={p.external ? "_blank" : undefined}
-                  rel={p.external ? "noopener noreferrer" : undefined}
                   className="block py-2 px-2 rounded-md hover:bg-slate-50"
                   onClick={() => setMenuOpen(false)}
                 >
