@@ -28,7 +28,7 @@ export default function ContatoPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <PhoneIcon className="h-5 w-5 text-[#005792]" />
-                  <span className="text-slate-700 text-sm">A definir</span>
+                  <span className="text-slate-700 text-sm">(19) 3201-3325</span>
                 </div>
               </div>
               <div className="mt-8 bg-[#ffcb05]/10 border border-[#ffcb05]/30 rounded-xl p-5">

@@ -15,11 +15,11 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // unsafe-eval necessário em dev (React DevTools / Turbopack), removido em prod
-      `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
+      `script-src 'self' 'unsafe-inline' https://www.googletagmanager.com${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""}`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob:",
       "font-src 'self'",
-      "connect-src 'self'",
+      "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
       "frame-ancestors 'none'",
     ].join("; "),
   },

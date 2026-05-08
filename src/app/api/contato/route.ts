@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: "E9 Site <onboarding@resend.dev>",  // trocar para no-reply@e9.com.br após verificar domínio
-      to:   "thiago@e9.com.br", // trocar para contato@e9.com.br após verificar domínio no Resend
+      to:   "contato@e9.com.br",
       replyTo: email,
       subject: assunto,
       html,
