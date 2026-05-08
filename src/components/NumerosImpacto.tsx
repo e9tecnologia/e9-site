@@ -24,7 +24,9 @@ function useCountUp(target: number, active: boolean, duration = 1600) {
   return count;
 }
 
-function Numero({ valor, sufixo, label, detalhe, active }: typeof numeros[0] & { active: boolean }) {
+type NumeroItem = { valor: number; sufixo: string; label: string; detalhe: string };
+
+function Numero({ valor, sufixo, label, detalhe, active }: NumeroItem & { active: boolean }) {
   const count = useCountUp(valor, active);
   return (
     <div className="flex flex-col items-center text-center px-6 py-2">
