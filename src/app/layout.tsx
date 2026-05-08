@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   description: "Fábrica de software em Campinas, SP. Desenvolvemos ERPs, sistemas de gestão, aplicativos e soluções sob medida para empresas. Especialistas em fiscal, financeiro e automação. Desde 2003.",
   metadataBase: new URL("https://e9.com.br"),
-  canonical: "https://e9.com.br",
+  alternates: { canonical: "https://e9.com.br" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
