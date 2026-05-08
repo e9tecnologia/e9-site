@@ -115,8 +115,6 @@ export default function Footer() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    target={item.external ? "_blank" : undefined}
-                    rel={item.external ? "noopener noreferrer" : undefined}
                     className="group block"
                   >
                     <span className="text-slate-400 group-hover:text-white transition-colors font-medium">{item.label}</span>
