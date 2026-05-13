@@ -11,28 +11,12 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    slug: "controle-financeiro-sem-planilha",
-    titulo: "Por que sua empresa não pode mais depender de planilhas para o financeiro",
-    resumo: "Planilhas funcionaram por muito tempo. Mas existe um ponto em que elas se tornam o maior risco do seu negócio.",
-    data: "2026-05-01",
+    slug: "01-dre-desatualizada",
+    titulo: "Por que a DRE da sua empresa está sempre desatualizada — e o que fazer sobre isso",
+    resumo: "A maioria das empresas descobre os resultados do mês 15 dias depois que ele terminou. Isso não é inevitável — é uma consequência de como o sistema foi construído.",
+    data: "2026-05-13",
     tag: "Gestão Financeira",
     destaque: true,
-  },
-  {
-    slug: "multi-cnpj-como-gerenciar",
-    titulo: "Múltiplos CNPJs, filiais e unidades de negócio: como ter visão consolidada sem perder o controle individual",
-    resumo: "Gerir várias empresas, filiais ou unidades de negócio em sistemas separados é caro, lento e arriscado. Existe uma forma melhor.",
-    data: "2026-04-20",
-    tag: "Gestão Empresarial",
-    destaque: false,
-  },
-  {
-    slug: "integracao-bancaria-erp",
-    titulo: "Integração bancária no ERP: o que muda na prática",
-    resumo: "Quando você para de fazer operações manuais no banco e começa a conciliar diretamente no sistema, o tempo e os erros diminuem drasticamente.",
-    data: "2026-04-10",
-    tag: "Financeiro",
-    destaque: false,
   },
 ];
 
@@ -98,7 +82,7 @@ export default function BlogPage() {
                     Mais recente
                   </span>
                   <time className="text-slate-400 text-xs ml-auto">
-                    {new Date(destaque.data).toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" })}
+                    {(([a, m, d]) => new Date(+a, +m - 1, +d).toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" }))(destaque.data.split("-"))}
                   </time>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-3 leading-snug group-hover:text-[#005792] transition-colors">
@@ -125,7 +109,7 @@ export default function BlogPage() {
                         {post.tag}
                       </span>
                       <time className="text-slate-400 text-xs">
-                        {new Date(post.data).toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" })}
+                        {(([a, m, d]) => new Date(+a, +m - 1, +d).toLocaleDateString("pt-BR", { day: "numeric", month: "long", year: "numeric" }))(post.data.split("-"))}
                       </time>
                     </div>
                     <h2 className="text-base font-black text-slate-900 mb-2 leading-snug group-hover:text-[#005792] transition-colors">
