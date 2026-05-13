@@ -7,10 +7,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "E9 Tecnologia — Fábrica de Software em Campinas | ERP, Apps e Sistemas sob Medida",
+    default: "E9 Tecnologia — Plataforma ERP para Operações Empresariais | Desde 2003",
     template: "%s | E9 Tecnologia",
   },
-  description: "Fábrica de software em Campinas, SP. Desenvolvemos ERPs, sistemas de gestão, aplicativos e soluções sob medida para empresas. Especialistas em fiscal, financeiro e automação. Desde 2003.",
+  description: "Plataforma ERP própria para gestão financeira, fiscal, estoque, produção, RFID e automação bancária. Tecnologia empresarial consolidada desde 2003. Campinas, SP.",
   metadataBase: new URL("https://e9.com.br"),
   alternates: { canonical: "https://e9.com.br" },
   openGraph: {
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://e9.com.br",
     siteName: "E9 Tecnologia",
-    title: "E9 Tecnologia — Fábrica de Software em Campinas",
-    description: "Desenvolvemos ERPs, sistemas de gestão, aplicativos e soluções sob medida para empresas. Especialistas em fiscal, financeiro e automação desde 2003.",
+    title: "E9 Tecnologia — Plataforma ERP para Operações Empresariais",
+    description: "Plataforma ERP completa com módulos de financeiro, fiscal, estoque, RFID e automação bancária. Tecnologia empresarial consolidada desde 2003.",
     images: [
       {
         url: "/og-image.png",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "E9 Tecnologia — Fábrica de Software em Campinas",
-    description: "ERPs, sistemas de gestão e soluções sob medida para empresas. Especialistas em fiscal e financeiro.",
+    title: "E9 Tecnologia — Plataforma ERP para Operações Empresariais",
+    description: "ERP completo: financeiro, fiscal, estoque, produção, RFID e automação bancária. Desde 2003.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   keywords: [
-    "fábrica de software", "sistema de gestão", "ERP", "software sob medida",
-    "desenvolvimento de sistemas", "Campinas", "São Paulo",
-    "NF-e", "NFS-e", "fiscal", "financeiro", "aplicativo empresarial",
-    "E9 Gestão", "E9 Tecnologia", "IoT", "RFID",
+    "ERP empresarial", "plataforma ERP", "sistema de gestão", "software ERP",
+    "automação empresarial", "integração bancária ERP", "RFID industrial",
+    "rastreabilidade ERP", "ERP financeiro", "ERP fiscal", "ERP para indústria",
+    "gestão empresarial", "Campinas", "São Paulo", "E9 Gestão", "E9 Tecnologia",
   ],
 };
 
@@ -56,7 +56,7 @@ const schemaOrg = {
   url: "https://e9.com.br",
   logo: "https://e9.com.br/logo-enove.png",
   foundingDate: "2003",
-  description: "Fábrica de software especializada em sistemas de gestão, aplicativos e soluções sob medida para empresas.",
+  description: "Plataforma ERP própria para gestão financeira, fiscal, operacional e industrial. Tecnologia empresarial consolidada desde 2003.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Rua Pascoal Nicholau Purshio, 398",

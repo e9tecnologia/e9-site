@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 import { ArrowRightIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "Cases de Sucesso — Projetos e Resultados",
-  description: "Conheça como a E9 Tecnologia resolve desafios reais de gestão, fiscal e operação em diferentes segmentos de mercado.",
+  title: "Cases — E9 Tecnologia",
+  description: "Conheça como empresas de diferentes segmentos resolveram desafios reais de gestão, fiscal e operação com o E9 Gestão.",
 };
 
 const cases = [
@@ -20,7 +20,6 @@ const cases = [
       "Conciliação bancária sem operação manual",
       "Relatórios gerenciais consolidados por empresa",
     ],
-    cor: "border-slate-200",
     badge: "E9 Gestão",
   },
   {
@@ -33,7 +32,6 @@ const cases = [
       "NFS-e emitida automaticamente por competência",
       "Inadimplência reduzida com cobrança automatizada",
     ],
-    cor: "border-[#ffcb05]/40",
     badge: "E9 Gestão",
   },
   {
@@ -46,7 +44,6 @@ const cases = [
       "Prestação de contas automatizada",
       "Visão consolidada de todos os projetos",
     ],
-    cor: "border-slate-200",
     badge: "E9 Gestão",
   },
   {
@@ -59,7 +56,6 @@ const cases = [
       "NF-e rural emitida diretamente no fluxo de venda",
       "Controle de estoque de animais e embriões",
     ],
-    cor: "border-[#ffcb05]/40",
     badge: "Sob medida",
   },
   {
@@ -72,14 +68,13 @@ const cases = [
       "Integração entre fiscal, logística e financeiro",
       "Redução de retrabalho operacional",
     ],
-    cor: "border-slate-200",
     badge: "E9 Gestão",
   },
 ];
 
 const badgeColors: Record<string, string> = {
   "E9 Gestão":  "bg-[#005792]/10 text-[#005792]",
-  "Sob medida": "bg-slate-100 text-slate-600",
+  "Sob medida": "bg-amber-50 text-amber-700",
 };
 
 export default function CasesPage() {
@@ -89,33 +84,46 @@ export default function CasesPage() {
       <main className="flex-1">
 
         {/* Hero */}
-        <section className="bg-slate-900 pt-20 pb-24 px-4 sm:px-6">
+        <section
+          className="text-white pt-20 pb-24 px-4 sm:px-6"
+          style={{ background: "linear-gradient(135deg, #003f6b 0%, #005792 60%, #006aaf 100%)" }}
+        >
           <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block bg-[#ffcb05]/20 text-[#ffcb05] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-cyan-400 mb-6">
+              <span className="w-6 h-px bg-cyan-400" />
               Resultados reais
+              <span className="w-6 h-px bg-cyan-400" />
             </span>
-            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-5">
+            <h1 className="text-4xl sm:text-5xl font-black text-white leading-tight mb-5">
               Desafios resolvidos,{" "}
-              <span className="text-[#ffcb05]">operações transformadas</span>
+              <span
+                style={{
+                  background: "linear-gradient(135deg, #ffcb05 0%, #ffd740 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                operações transformadas
+              </span>
             </h1>
-            <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto">
-              Empresas de diferentes segmentos que superaram limitações operacionais com sistemas desenvolvidos e implantados pela E9 Tecnologia.
+            <p className="text-white/65 text-lg leading-relaxed max-w-2xl mx-auto">
+              Empresas de diferentes segmentos que superaram limitações operacionais com o E9 Gestão — solução desenvolvida e adaptada pela E9 Tecnologia.
             </p>
           </div>
         </section>
 
         {/* Cases */}
-        <section className="py-20 px-4 sm:px-6">
+        <section className="bg-slate-50 py-20 px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {cases.map((c) => (
                 <div
                   key={c.titulo}
-                  className={`bg-white rounded-2xl border-2 ${c.cor} p-7 flex flex-col hover:shadow-lg transition-all duration-300`}
+                  className="bg-white rounded-2xl border border-slate-100 p-7 flex flex-col hover:shadow-md hover:border-[#005792]/20 transition-all duration-300"
                 >
-                  {/* Segmento + badge produto */}
                   <div className="flex items-center justify-between mb-5">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    <span className="text-xs font-bold uppercase tracking-widest text-slate-400">
                       {c.segmento}
                     </span>
                     <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${badgeColors[c.badge]}`}>
@@ -123,25 +131,25 @@ export default function CasesPage() {
                     </span>
                   </div>
 
-                  <h2 className="text-base font-bold text-slate-900 mb-5 leading-snug">{c.titulo}</h2>
+                  <h2 className="text-base font-black text-slate-900 mb-5 leading-snug">{c.titulo}</h2>
 
                   <div className="space-y-4 mb-6 flex-1">
                     <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Desafio</p>
-                      <p className="text-slate-600 text-sm leading-relaxed">{c.desafio}</p>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Desafio</p>
+                      <p className="text-slate-500 text-sm leading-relaxed">{c.desafio}</p>
                     </div>
                     <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1">Solução</p>
-                      <p className="text-slate-600 text-sm leading-relaxed">{c.solucao}</p>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-1.5">Solução</p>
+                      <p className="text-slate-500 text-sm leading-relaxed">{c.solucao}</p>
                     </div>
                   </div>
 
                   <div className="border-t border-slate-100 pt-4">
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-2.5">Resultados</p>
-                    <ul className="space-y-1.5">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-3">Resultados</p>
+                    <ul className="space-y-2">
                       {c.resultados.map((r) => (
                         <li key={r} className="flex items-start gap-2 text-sm text-slate-700">
-                          <CheckCircleIcon className="h-4 w-4 text-[#ffcb05] flex-shrink-0 mt-0.5" />
+                          <CheckCircleIcon className="h-4 w-4 text-[#005792] flex-shrink-0 mt-0.5" />
                           {r}
                         </li>
                       ))}
@@ -154,17 +162,20 @@ export default function CasesPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#ffcb05] py-20 px-4 sm:px-6">
+        <section
+          className="py-20 px-4 sm:px-6"
+          style={{ background: "linear-gradient(135deg, #003f6b 0%, #005792 100%)" }}
+        >
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-black text-white mb-4">
               Sua empresa pode ser o próximo case
             </h2>
-            <p className="text-slate-700 text-lg mb-8">
-              Conte seu desafio. A E9 analisa sua operação e propõe a solução certa.
+            <p className="text-white/65 text-lg mb-8">
+              Conte seu desafio. A equipe E9 analisa sua operação e propõe a solução certa.
             </p>
             <Link
               href="/contato"
-              className="inline-flex items-center gap-2 bg-slate-900 text-white font-bold px-8 py-4 rounded-xl hover:bg-slate-700 transition-colors text-lg"
+              className="inline-flex items-center gap-2 bg-[#ffcb05] text-[#003f6b] font-bold px-8 py-4 rounded-xl hover:bg-yellow-400 transition-colors text-lg"
             >
               Falar com a equipe
               <ArrowRightIcon className="h-5 w-5" />

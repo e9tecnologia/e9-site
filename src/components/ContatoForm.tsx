@@ -29,16 +29,20 @@ export default function ContatoForm({ tipo = "contato" }: Props) {
 
   if (status === "ok") {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-        <p className="text-2xl mb-2">✓</p>
-        <p className="font-bold text-green-800">Mensagem recebida!</p>
-        <p className="text-green-700 text-sm mt-2">Nossa equipe entra em contato em até 1 dia útil.</p>
+      <div className="bg-green-50 border border-green-200 rounded-2xl p-10 text-center">
+        <div className="w-12 h-12 rounded-full bg-green-100 border border-green-300 flex items-center justify-center mx-auto mb-4">
+          <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24">
+            <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+        <p className="font-black text-green-900 text-lg mb-1">Mensagem recebida!</p>
+        <p className="text-green-700 text-sm">Nossa equipe entra em contato em até 1 dia útil.</p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-slate-50 rounded-2xl p-8 border border-slate-100">
+    <form onSubmit={handleSubmit} className="space-y-4 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
       {/* Honeypot — invisível para humanos, bots preenchem */}
       <input name="_hp" type="text" tabIndex={-1} aria-hidden="true" style={{ display: "none" }} />
       <div className="grid sm:grid-cols-2 gap-4">
@@ -145,7 +149,7 @@ export default function ContatoForm({ tipo = "contato" }: Props) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-[#005792] text-white font-semibold py-3 rounded-lg hover:bg-[#004a7c] transition-colors disabled:opacity-60"
+        className="w-full bg-[#ffcb05] text-[#003f6b] font-bold py-3.5 rounded-xl hover:bg-yellow-400 transition-colors disabled:opacity-60"
       >
         {status === "loading" ? "Enviando..." : tipo === "proposta" ? "Solicitar proposta" : tipo === "parceiro" ? "Quero ser parceiro" : "Enviar mensagem"}
       </button>
