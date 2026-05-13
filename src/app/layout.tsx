@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "E9 Tecnologia — Fábrica de Software",
+        alt: "E9 Tecnologia — Plataforma ERP para Operações Empresariais",
       },
     ],
   },

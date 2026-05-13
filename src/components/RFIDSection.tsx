@@ -95,7 +95,7 @@ export default function RFIDSection() {
             {/* Foto chão de fábrica */}
             <div className="relative w-full h-44 rounded-2xl overflow-hidden border border-white/10">
               <Image
-                src="/images/pexels-tiger-lily-4481256.jpg"
+                src="/images/gestao/rfid-fabrica.jpg"
                 alt="Operador em chão de fábrica com coletor Android — RFID integrado ao ERP"
                 fill
                 className="object-cover object-center"
